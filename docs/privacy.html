@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>プライバシーポリシー・利用規約 — 森羅万象アナライザー</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --gold-dim: #7a6230;
+      --black: #0a0a0a;
+      --dark: #111111;
+      --dark-2: #1a1a1a;
+      --dark-3: #242424;
+      --text: #e8e4dc;
+      --text-dim: #9a9488;
+      --border: rgba(201,168,76,0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--black);
+      color: var(--text);
+      font-family: 'Noto Sans JP', sans-serif;
+      font-weight: 300;
+      line-height: 1.9;
+      min-height: 100vh;
+    }
+
+    /* 背景装飾 */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(201,168,76,0.07) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(201,168,76,0.04) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ヘッダー */
+    header {
+      padding: 60px 0 48px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 56px;
+    }
+
+    .app-name {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(13px, 2.5vw, 15px);
+      letter-spacing: 0.35em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(22px, 5vw, 32px);
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .header-meta {
+      margin-top: 20px;
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.1em;
+    }
+
+    /* タブナビ */
+    .tab-nav {
+      display: flex;
+      gap: 2px;
+      background: var(--dark-2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 4px;
+      margin-bottom: 48px;
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 10px;
+      background: none;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--text-dim);
+      cursor: pointer;
+      transition: all 0.2s;
+      letter-spacing: 0.05em;
+    }
+
+    .tab-btn.active {
+      background: var(--dark-3);
+      color: var(--gold);
+      border: 1px solid var(--border);
+    }
+
+    /* セクション */
+    .section {
+      margin-bottom: 48px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      color: var(--gold-dim);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .section h2 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: clamp(16px, 3vw, 20px);
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.05em;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .section h2::before {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section h3 {
+      font-family: 'Noto Sans JP', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--gold-light);
+      letter-spacing: 0.08em;
+      margin: 24px 0 8px;
+    }
+
+    .section p {
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .section ul, .section ol {
+      padding-left: 1.4em;
+      margin-bottom: 12px;
+    }
+
+    .section li {
+      font-size: 14px;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    /* 強調ボックス */
+    .notice-box {
+      background: rgba(201,168,76,0.06);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+      padding: 16px 20px;
+      margin: 20px 0;
+      font-size: 13px;
+      color: var(--text-dim);
+      line-height: 1.8;
+    }
+
+    /* 外部リンク */
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: var(--gold-light);
+      border-color: var(--gold-light);
+    }
+
+    /* テーブル */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 16px 0;
+    }
+    th {
+      background: var(--dark-2);
+      color: var(--gold);
+      font-weight: 500;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid var(--border);
+      letter-spacing: 0.05em;
+    }
+    td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+    /* フッター */
+    footer {
+      margin-top: 64px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      line-height: 2;
+    }
+
+    .gold-line {
+      width: 40px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      margin: 0 auto 24px;
+    }
+
+    /* タブコンテンツ */
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    /* スクロールアニメ */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .section { animation: fadeUp 0.5s ease both; }
+    .section:nth-child(2) { animation-delay: 0.05s; }
+    .section:nth-child(3) { animation-delay: 0.10s; }
+    .section:nth-child(4) { animation-delay: 0.15s; }
+    .section:nth-child(5) { animation-delay: 0.20s; }
+    .section:nth-child(6) { animation-delay: 0.25s; }
+
+    @media (max-width: 600px) {
+      .container { padding: 0 16px 60px; }
+      header { padding: 40px 0 36px; }
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <p class="app-name">森羅万象アナライザー</p>
+    <h1>プライバシーポリシー<br>および利用規約</h1>
+    <p class="header-meta">制定日：2025年__月__日　／　最終更新：2025年__月__日</p>
+  </header>
+
+  <nav class="tab-nav">
+    <button class="tab-btn active" onclick="switchTab('privacy', this)">プライバシーポリシー</button>
+    <button class="tab-btn" onclick="switchTab('terms', this)">利用規約</button>
+  </nav>
+
+  <!-- =========================================
+       プライバシーポリシー
+  ========================================= -->
+  <div id="privacy" class="tab-content active">
+
+    <div class="section">
+      <span class="section-label">はじめに</span>
+      <h2>基本方針</h2>
+      <p>本アプリ「森羅万象アナライザー」（以下「本アプリ」）を開発・運営する開発者（以下「開発者」）は、ユーザーのプライバシーを尊重し、個人情報の保護に努めます。本ポリシーは、本アプリにおける情報の取り扱いについて説明するものです。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">収集する情報</span>
+      <h2>取得する情報</h2>
+
+      <h3>ユーザーが送信する情報</h3>
+      <p>本アプリは、ユーザーが解析のために選択・撮影した画像を取得します。この画像は解析目的のみに使用され、開発者のサーバーには保存されません。</p>
+
+      <h3>自動的に取得される情報</h3>
+      <p>以下の情報が第三者サービスによって自動的に収集される場合があります。</p>
+      <ul>
+        <li>広告配信のための識別子・端末情報（Google AdMob）</li>
+        <li>アプリのクラッシュ情報・利用統計（各ストアの標準機能）</li>
+        <li>課金・購入履歴（RevenueCat、決済処理のみ）</li>
+      </ul>
+
+      <h3>端末内に保存される情報</h3>
+      <p>以下の情報はユーザーの端末内にのみ保存され、外部には送信されません。</p>
+      <ul>
+        <li>解析結果（能力値・解説文・レア度）</li>
+        <li>解析に使用した画像（アプリ専用フォルダ内）</li>
+        <li>アプリの設定情報（広告除去の購入状態など）</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="section-label">外部サービス</span>
+      <h2>第三者サービスへの情報送信</h2>
+
+      <div class="notice-box">
+        ⚠️ 本アプリは解析機能のため、ユーザーが選択した画像を外部サーバー（OpenAI）に送信します。送信前に必ず本ポリシーをご確認ください。
+      </div>
+
+      <table>
+        <tr>
+          <th>サービス</th>
+          <th>送信される情報</th>
+          <th>目的</th>
+          <th>プライバシーポリシー</th>
+        </tr>
+        <tr>
+          <td>OpenAI</td>
+          <td>解析対象の画像（圧縮済み）</td>
+          <td>AI による能力値・解説文の生成</td>
+          <td><a href="https://openai.com/ja/policies/privacy-policy" target="_blank">OpenAI プライバシーポリシー</a></td>
+        </tr>
+        <tr>
+          <td>Google AdMob</td>
+          <td>広告識別子・端末情報</td>
+          <td>広告配信</td>
+          <td><a href="https://policies.google.com/privacy" target="_blank">Google プライバシーポリシー</a></td>
+        </tr>
+        <tr>
+          <td>RevenueCat</td>
+          <td>購入レシート・ユーザーID</td>
+          <td>課金処理・購入状態の管理</td>
+          <td><a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat プライバシーポリシー</a></td>
+        </tr>
+      </table>
+
+      <h3>OpenAI への画像送信について</h3>
+      <p>OpenAI の API 利用規約に基づき、API 経由で送信されたデータは OpenAI の AI モデルの学習には使用されません。ただし、OpenAI のプライバシーポリシーおよびサービス利用規約が適用されます。詳細は上記リンクをご確認ください。</p>
+      <p>送信を希望しない場合は、本アプリのご利用をお控えください。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">取り扱い方針</span>
+      <h2>情報の利用目的</h2>
+      <ul>
+        <li>AI による画像解析・能力値の生成</li>
+        <li>解析結果のローカル保存およびコレクション機能の提供</li>
+        <li>広告の配信（AdMob）</li>
+        <li>課金機能の提供（RevenueCat）</li>
+        <li>アプリの改善・不具合の修正</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="section-label">ユーザーへのお願い</span>
+      <h2>画像送信に関する注意事項</h2>
+      <p>以下のような画像の送信はお控えください。</p>
+      <ul>
+        <li>他人の顔が写った画像（本人の同意がない場合）</li>
+        <li>住所・電話番号・クレジットカード番号など個人情報が写り込んだ画像</li>
+        <li>未成年者が写った画像</li>
+        <li>成人向けコンテンツ・暴力的・差別的・違法なコンテンツを含む画像</li>
+        <li>著作権者の許諾なく著作権のある作品を撮影した画像</li>
+        <li>プライバシーを侵害するおそれのある画像</li>
+      </ul>
+      <div class="notice-box">
+        上記に該当する画像を送信した場合、OpenAI の利用規約違反となる可能性があります。また、本アプリは不適切なコンテンツを検出した場合、解析を拒否します。
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">お子様の利用</span>
+      <h2>未成年者のプライバシー</h2>
+      <p>本アプリは 13 歳未満のお子様を対象としていません。13 歳未満のお子様から意図的に個人情報を収集することはありません。保護者の方で、お子様が本アプリを通じて情報を送信したとお気づきの場合は、下記連絡先までご連絡ください。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">改定について</span>
+      <h2>プライバシーポリシーの変更</h2>
+      <p>本ポリシーは、法令の変更・サービスの変更等に伴い、予告なく改定される場合があります。改定後のポリシーは本ページに掲載した時点で効力を生じるものとします。重要な変更が生じた場合は、アプリ内でお知らせします。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">お問い合わせ</span>
+      <h2>連絡先</h2>
+      <p>本ポリシーに関するご質問・ご意見は以下までお問い合わせください。</p>
+      <p>メールアドレス：<a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <p style="font-size:12px; color: var(--text-dim); margin-top:8px;">※ メールアドレスはリリース前に実際のものに変更してください</p>
+    </div>
+
+  </div><!-- /privacy -->
+
+  <!-- =========================================
+       利用規約
+  ========================================= -->
+  <div id="terms" class="tab-content">
+
+    <div class="section">
+      <span class="section-label">はじめに</span>
+      <h2>利用規約への同意</h2>
+      <p>本利用規約（以下「本規約」）は、開発者が提供する「森羅万象アナライザー」（以下「本アプリ」）の利用条件を定めるものです。本アプリをご利用いただくことで、本規約に同意したものとみなします。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">サービス内容</span>
+      <h2>本アプリについて</h2>
+      <p>本アプリは、ユーザーが送信した画像をもとに AI が「ゲーム風の能力値」を生成して表示するエンターテインメントアプリです。</p>
+      <div class="notice-box">
+        本アプリが表示する能力値・解説文はすべて AI が生成したジョークコンテンツです。実在する人物・動物・物の実際の能力・価値・優劣を示すものではありません。
+      </div>
+    </div>
+
+    <div class="section">
+      <span class="section-label">禁止行為</span>
+      <h2>禁止事項</h2>
+      <p>ユーザーは以下の行為を行ってはなりません。</p>
+      <ol>
+        <li>他人の同意なく、他人の顔写真や個人が特定できる画像を送信・シェアすること</li>
+        <li>成人向けコンテンツ・暴力的・差別的・違法なコンテンツを含む画像を送信すること</li>
+        <li>著作権・肖像権・プライバシー権その他の権利を侵害する行為</li>
+        <li>特定の個人・団体を誹謗中傷する目的で本アプリの解析結果を使用すること</li>
+        <li>本アプリのリバースエンジニアリング・改ざん・不正アクセス</li>
+        <li>商業目的での無断利用（開発者の書面による許可がない場合）</li>
+        <li>その他、法令または公序良俗に違反する行為</li>
+      </ol>
+    </div>
+
+    <div class="section">
+      <span class="section-label">知的財産</span>
+      <h2>著作権・知的財産権</h2>
+      <p>本アプリに関する著作権・商標権その他の知的財産権は、開発者に帰属します。</p>
+      <p>ユーザーが本アプリを通じて生成・保存したカード画像について、ユーザーは個人的・非商業的な範囲で自由に利用・SNS シェアを行うことができます。ただし、シェアする画像に第三者の著作物・肖像が含まれる場合は、ユーザー自身が権利処理の責任を負います。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">課金・返金</span>
+      <h2>有料機能について</h2>
+      <p>本アプリには「広告除去」の買い切り購入が含まれます。</p>
+      <ul>
+        <li>購入後の返金は、各ストア（App Store / Google Play）の返金ポリシーに従います</li>
+        <li>機種変更・再インストール後は「購入を復元」機能でお使いいただけます</li>
+        <li>開発者都合でのアプリ終了・機能変更が生じた場合の返金は対応しかねます</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <span class="section-label">免責</span>
+      <h2>免責事項</h2>
+      <p>開発者は以下について一切の責任を負いません。</p>
+      <ul>
+        <li>本アプリの利用・利用不能によって生じた損害</li>
+        <li>AI が生成した解析結果の正確性・適切性</li>
+        <li>ユーザーが送信した画像に含まれる第三者の権利侵害</li>
+        <li>第三者サービス（OpenAI・AdMob・RevenueCat）の障害・仕様変更</li>
+        <li>通信環境・端末環境に起因する不具合</li>
+        <li>本アプリの変更・停止・終了</li>
+      </ul>
+      <p>本アプリは現状有姿で提供されます。開発者は本アプリの継続的な提供・特定目的への適合性を保証しません。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">準拠法</span>
+      <h2>準拠法・管轄</h2>
+      <p>本規約は日本法に準拠し、解釈されます。本規約に関する紛争については、開発者の所在地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">改定</span>
+      <h2>規約の変更</h2>
+      <p>開発者は、必要と判断した場合、ユーザーへの事前通知なく本規約を変更することがあります。変更後の利用規約は本ページに掲載した時点で効力を生じます。</p>
+    </div>
+
+    <div class="section">
+      <span class="section-label">お問い合わせ</span>
+      <h2>連絡先</h2>
+      <p>本規約に関するご質問は以下までお問い合わせください。</p>
+      <p>メールアドレス：<a href="mailto:your-email@example.com">your-email@example.com</a></p>
+      <p style="font-size:12px; color: var(--text-dim); margin-top:8px;">※ メールアドレスはリリース前に実際のものに変更してください</p>
+    </div>
+
+  </div><!-- /terms -->
+
+  <footer>
+    <div class="gold-line"></div>
+    <p>© 2025 森羅万象アナライザー</p>
+    <p>制定日：2025年__月__日　／　最終更新：2025年__月__日</p>
+  </footer>
+
+</div><!-- /container -->
+
+<script>
+  function switchTab(id, btn) {
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    btn.classList.add('active');
+  }
+</script>
+</body>
+</html>
